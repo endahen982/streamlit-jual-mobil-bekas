@@ -186,7 +186,6 @@ pickle.dump(lr,open(filename,'wb'))
 ## Deployment
 
 [Estimasi Harga Jual Mobil Bekas](https://app-estimasi-mobil-bekas-5pjjkz3v9p6aqhan2omwwz.streamlit.app/)
-
 ![Alt text](image.png)
 
 
