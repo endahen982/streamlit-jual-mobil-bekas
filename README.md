@@ -35,10 +35,10 @@ df.columns
 plt.figure(figsize=(10,8))
 sns.heatmap(df.corr(),annot=True)
 ```
-
-```bash
 ![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/869170d2-1cb6-4eab-92ba-b407a0908161)
-```
+
+Hasil grafik ini adalah tampilan visual yang menggambarkan sejauh mana kolom-kolom dalam data frame "df" bisa berkorelasi satu sama lain. Kolom yang memiliki korelasi positif tinggi akan terlihat sebagai sel dengan warna yang lebih terang, sedangkan kolom yang berkorelasi negatif tinggi akan terlihat sebagai sel dengan warna yang lebih gelap.
+
 
 ```bash
 Fuel_Types = df.groupby('Fuel_Type').count()[['Selling_Price']].sort_values(by='Selling_Price',ascending=True).reset_index()
@@ -49,9 +49,16 @@ Fuel_Types = Fuel_Types.rename(columns={'Selling_Price':'car data'})
 fig = plt.figure(figsize=(20,5))
 sns.barplot(x=Fuel_Types['Fuel_Type'], y=Fuel_Types['car data'], color='maroon')
 plt.xticks(rotation=40)
-
-![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/d6a1b957-70fc-4599-a6ae-e04f8b1d2e33)
 ```
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/d6a1b957-70fc-4599-a6ae-e04f8b1d2e33)
+
+Hasil grafik Jumlah Mobil Bekas Berdasarkan Jenis Bahan Bakar menunjukkan perbandingan jumlah data mobil yang menggunakan jenis bahan bakar yang berbeda. Berdasarkan grafik ini, kita dapat mengamati hal berikut:
+
+Bahan bakar 'CNG' memiliki jumlah data mobil paling sedikit, ditunjukkan oleh batang pertama pada grafik.
+Bahan bakar 'Diesel' memiliki jumlah data mobil yang sedang, ditunjukkan oleh batang kedua pada grafik.
+Bahan bakar 'Petrol' memiliki jumlah data mobil paling banyak, ditunjukkan oleh batang terakhir pada grafik.
+
+Grafik ini memberikan informasi visual tentang distribusi data mobil berdasarkan jenis bahan bakar berupa gambaran visual tentang seberapa banyak mobil yang tersedia untuk masing-masing jenis bahan bakar. Jenis bahan bakar dengan batang grafik yang lebih tinggi memiliki lebih banyak mobil yang tersedia, sedangkan jenis bahan bakar dengan batang yang lebih pendek memiliki jumlah mobil yang lebih sedikit. Ini akan membantu preferensi konsumen terkait dengan jenis bahan bakar kendaraan.
 
 ```bash
 Years = df.groupby('Year').count()[['Selling_Price']].sort_values(by='Selling_Price',ascending=True).reset_index()
@@ -61,21 +68,23 @@ Years = Years.rename(columns={'Selling_Price':'Count'})
 ```bash
 fig = plt.figure(figsize=(20,5))
 sns.barplot(x=Years['Year'], y=Years['Count'], color='maroon')
-![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/bae3134f-5e50-4ae8-b1b7-d60b9718e41a)
 ```
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/bae3134f-5e50-4ae8-b1b7-d60b9718e41a)
+
+Hasil grafik Jumlah Data Penjualan Berdasarkan Tahun bisa dilihat bahwa penjualan terbanyak terjadi ditahun 2015 dan penjualan terendah terjadi pada 2004.
 
 ```bash
 plt.figure(figsize=(15,5))
 sns.distplot(df['Present_Price'])
-![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/b8602edf-8f24-42f3-adc4-207821264cc9)
-
 ```
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/b8602edf-8f24-42f3-adc4-207821264cc9)
 
 ```bash
 plt.figure(figsize=(15,5))
 sns.distplot(df['Selling_Price'])
-![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/14baa8bc-71b0-4fa7-b536-203e5bcf8c14)
 ```
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/14baa8bc-71b0-4fa7-b536-203e5bcf8c14)
+
 ### Variabel-variabel pada Vehicle dataset adalah sebagai berikut:
 - Car_Name : Mempresentasikan nama merek atau identifikasi mobil.
 
