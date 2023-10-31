@@ -57,11 +57,11 @@ plt.xticks(rotation=40)
 
 Hasil grafik Jumlah Mobil Bekas Berdasarkan Jenis Bahan Bakar menunjukkan perbandingan jumlah data mobil yang menggunakan jenis bahan bakar yang berbeda. Berdasarkan grafik ini, kita dapat mengamati hal berikut:
 
-Bahan bakar 'CNG' memiliki jumlah data mobil paling sedikit, ditunjukkan oleh batang pertama pada grafik.
-Bahan bakar 'Diesel' memiliki jumlah data mobil yang sedang, ditunjukkan oleh batang kedua pada grafik.
-Bahan bakar 'Petrol' memiliki jumlah data mobil paling banyak, ditunjukkan oleh batang terakhir pada grafik.
+- Bahan bakar 'CNG' memiliki jumlah data mobil paling sedikit, ditunjukkan oleh batang pertama pada grafik.
+- Bahan bakar 'Diesel' memiliki jumlah data mobil yang sedang, ditunjukkan oleh batang kedua pada grafik.
+- Bahan bakar 'Petrol' memiliki jumlah data mobil paling banyak, ditunjukkan oleh batang terakhir pada grafik.
 
-Grafik ini memberikan informasi visual tentang distribusi data mobil berdasarkan jenis bahan bakar berupa gambaran visual tentang seberapa banyak mobil yang tersedia untuk masing-masing jenis bahan bakar. Jenis bahan bakar dengan batang grafik yang lebih tinggi memiliki lebih banyak mobil yang tersedia, sedangkan jenis bahan bakar dengan batang yang lebih pendek memiliki jumlah mobil yang lebih sedikit. Ini akan membantu preferensi konsumen terkait dengan jenis bahan bakar kendaraan.
+Hasil ini memberikan tentang distribusi data mobil berdasarkan jenis bahan bakar berupa gambaran visual tentang seberapa banyak mobil yang tersedia untuk masing-masing jenis bahan bakar. Disini bisa dilihat bahwa Jenis bahan bakar dengan batang grafik yang lebih tinggi memiliki lebih banyak mobil yang tersedia, sedangkan jenis bahan bakar dengan batang yang lebih pendek memiliki jumlah mobil yang lebih sedikit. Ini akan membantu preferensi konsumen terkait dengan jenis bahan bakar kendaraan.
 
 ```bash
 Years = df.groupby('Year').count()[['Selling_Price']].sort_values(by='Selling_Price',ascending=True).reset_index()
@@ -75,6 +75,7 @@ sns.barplot(x=Years['Year'], y=Years['Count'], color='maroon')
 ![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/bae3134f-5e50-4ae8-b1b7-d60b9718e41a)
 
 Hasil grafik Jumlah Data Penjualan Berdasarkan Tahun bisa dilihat bahwa penjualan terbanyak terjadi ditahun 2015 dan penjualan terendah terjadi pada 2004.
+
 
 ```bash
 plt.figure(figsize=(15,5))
