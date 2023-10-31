@@ -34,6 +34,7 @@ df.columns
 ```bash
 plt.figure(figsize=(10,8))
 sns.heatmap(df.corr(),annot=True)
+
 ![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/869170d2-1cb6-4eab-92ba-b407a0908161)
 ```
 
@@ -46,6 +47,7 @@ Fuel_Types = Fuel_Types.rename(columns={'Selling_Price':'car data'})
 fig = plt.figure(figsize=(20,5))
 sns.barplot(x=Fuel_Types['Fuel_Type'], y=Fuel_Types['car data'], color='maroon')
 plt.xticks(rotation=40)
+
 ![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/d6a1b957-70fc-4599-a6ae-e04f8b1d2e33)
 ```
 
