@@ -24,6 +24,8 @@ Pada hasil dari proyek pembuatan aplikasi "Estimasi Harga Jual Mobil Bekas" meng
 Pada hasil proyek ini saya menggunakan dataset yang tersedia di kaggle.com
  [Vehicle dataset](https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho/data?select=car+data.csv)  
 
+Untuk bagian ini, kita akan menggunakan teknik EDA
+
 
  ```bash
 df.columns
@@ -34,8 +36,11 @@ plt.figure(figsize=(10,8))
 sns.heatmap(df.corr(),annot=True)
 ![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/869170d2-1cb6-4eab-92ba-b407a0908161)
 ```
+
+```bash
 Fuel_Types = df.groupby('Fuel_Type').count()[['Selling_Price']].sort_values(by='Selling_Price',ascending=True).reset_index()
 Fuel_Types = Fuel_Types.rename(columns={'Selling_Price':'car data'})
+```
 
 ```bash
 fig = plt.figure(figsize=(20,5))
@@ -222,6 +227,3 @@ pickle.dump(lr,open(filename,'wb'))
 [Estimasi Harga Jual Mobil Bekas](https://app-estimasi-mobil-bekas-5pjjkz3v9p6aqhan2omwwz.streamlit.app/)
 
 ![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/83b4e9eb-457b-4b8c-8ff8-89fb84875f06)
-)
-
-
