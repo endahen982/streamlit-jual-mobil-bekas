@@ -3,6 +3,9 @@
 ### Nim : 211351050
 ### Kelas : TIF Pagi B
 
+![mobil_bekas](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/1c0e1319-0628-4701-8ce8-9a9d7ea47c34)
+
+
 ## Domain Proyek
 Pada hasil dari proyek pembuatan aplikasi "Estimasi Harga Jual Mobil Bekas" menggunakan Streamlit ialah menghadirkan solusi bagi para pengguna yang ingin menjual mobil bekas dan membantu pemilik mobil bekas agar mendapatkan perkiraan harga yang realistis, yang dapat mempermudah pada proses penjualan mobil bekas. Dengan memanfaatkan algoritma machine learning. Linear regression merupakan salah satu model regresi dalam machine learning yang banyak digunakan untuk memodelkan hubungan antara variabel dependen atau variabel independen.
 
