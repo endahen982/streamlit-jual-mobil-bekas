@@ -34,7 +34,9 @@ df.columns
 ```bash
 plt.figure(figsize=(10,8))
 sns.heatmap(df.corr(),annot=True)
+```
 
+```bash
 ![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/869170d2-1cb6-4eab-92ba-b407a0908161)
 ```
 
