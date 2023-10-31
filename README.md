@@ -24,6 +24,49 @@ Pada hasil dari proyek pembuatan aplikasi "Estimasi Harga Jual Mobil Bekas" meng
 Pada hasil proyek ini saya menggunakan dataset yang tersedia di kaggle.com
  [Vehicle dataset](https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho/data?select=car+data.csv)  
 
+
+ ```bash
+df.columns
+```
+
+```bash
+plt.figure(figsize=(10,8))
+sns.heatmap(df.corr(),annot=True)
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/869170d2-1cb6-4eab-92ba-b407a0908161)
+```
+Fuel_Types = df.groupby('Fuel_Type').count()[['Selling_Price']].sort_values(by='Selling_Price',ascending=True).reset_index()
+Fuel_Types = Fuel_Types.rename(columns={'Selling_Price':'car data'})
+
+```bash
+fig = plt.figure(figsize=(20,5))
+sns.barplot(x=Fuel_Types['Fuel_Type'], y=Fuel_Types['car data'], color='maroon')
+plt.xticks(rotation=40)
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/d6a1b957-70fc-4599-a6ae-e04f8b1d2e33)
+```
+
+```bash
+Years = df.groupby('Year').count()[['Selling_Price']].sort_values(by='Selling_Price',ascending=True).reset_index()
+Years = Years.rename(columns={'Selling_Price':'Count'})
+```
+
+```bash
+fig = plt.figure(figsize=(20,5))
+sns.barplot(x=Years['Year'], y=Years['Count'], color='maroon')
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/bae3134f-5e50-4ae8-b1b7-d60b9718e41a)
+```
+
+```bash
+plt.figure(figsize=(15,5))
+sns.distplot(df['Present_Price'])
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/b8602edf-8f24-42f3-adc4-207821264cc9)
+
+```
+
+```bash
+plt.figure(figsize=(15,5))
+sns.distplot(df['Selling_Price'])
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/14baa8bc-71b0-4fa7-b536-203e5bcf8c14)
+```
 ### Variabel-variabel pada Vehicle dataset adalah sebagai berikut:
 - Car_Name : Mempresentasikan nama merek atau identifikasi mobil.
 
@@ -94,15 +137,6 @@ df['Age']=date_time.year - df['Year']
 
 ```bash
 df.head()
-```
-
-```bash
-df.columns
-```
-
-```bash
-plt.figure(figsize=(10,8))
-sns.heatmap(df.corr(),annot=True)
 ```
 
 ```bash
@@ -187,6 +221,7 @@ pickle.dump(lr,open(filename,'wb'))
 
 [Estimasi Harga Jual Mobil Bekas](https://app-estimasi-mobil-bekas-5pjjkz3v9p6aqhan2omwwz.streamlit.app/)
 
-![Alt text](image14.png)
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/83b4e9eb-457b-4b8c-8ff8-89fb84875f06)
+)
 
 
