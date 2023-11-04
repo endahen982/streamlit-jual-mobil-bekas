@@ -230,6 +230,7 @@ pred = lr.predict(X_test)
 score = lr.score(X_test, y_test)
 print('akurasi model regresi liniear =', score)
 ```
+akurasi model regresi liniear = 0.8554216738797932
 
 ## Evaluation
 Metrik evaluasi yang digunakan dalam proyek ini adalah Mean Squared Error (MSE) dan R-squared(R^2). Berdasarkan metrik evaluasi yang digunakan dengan menggunakan Mean Squared Error (MSE) maka semakin rendah MSE, semakin baik model dalam memprediksi harga mobil bekas. Dan apabila menggunakan R-squared(R^2) maka semakin mendekati 1 nilai R^2, semakin baik model dalam menjelaskan variasi dalam harga mobil bekas.
