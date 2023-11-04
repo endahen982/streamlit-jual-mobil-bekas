@@ -266,6 +266,8 @@ r2 = r2_score(y_test, y_pred)
 print("Mean Squared Error:", mse)
 print("R-squared:", r2)
 ```
+Mean Squared Error: 3.9208691936662476
+R-squared: 0.833338425067031
 
 ## Inputan Model Regresi Linear
 
