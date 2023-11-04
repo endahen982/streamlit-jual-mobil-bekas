@@ -156,13 +156,58 @@ date_time = datetime.datetime.now()
 print(date_time)
 df['Age']=date_time.year - df['Year']
 ```
+Dibagian ini saya menambahkan data tahun mobil, yang bermaksud sebagai sudah berapa tahun mobil ini terpakai sejak pembelian pertama.
+
+```bash
+df["Selling_Price"].fillna(0, inplace=True)
+df["Car_Name"].fillna("No Car_Name", inplace=True)
+```
+Lalu Mengubah data Float menjadi Integer
+```bash
+df["Selling_Price"] = df["Selling_Price"].astype("int")
+```
+
+```bash
+df["Present_Price"] = df["Present_Price"].astype("int")
+```
+
+```bash
+numerical = []
+catgcols = []
+
+for col in df.columns:
+    if df[col].dtype== 'int64' :
+      numerical.append(col)
+    else:
+      catgcols.append(col)
+
+for col in df.columns:
+    if col in numerical:
+      df[col].fillna(df[col].median(), inplace=True)
+    else:
+      df[col].fillna(df[col].mode()[0], inplace=True)
+```
+
+```bash
+from sklearn.preprocessing import LabelEncoder
+
+le = LabelEncoder()
+
+for col in catgcols:
+  df[col] = le.fit_transform(df[col])
+```
+
+```bash
+df.info()
+```
+Lalu saya mengubah data object menjadi integer yang bertujuan agar dapat memasukan kedalam atribut pada bagian seleksi fitur
 
 ```bash
 df.head()
 ```
 
 ```bash
-features = ['Year','Present_Price','Owner','Kms_Driven','Age']
+features = ['Year','Present_Price','Owner','Kms_Driven','Age','Fuel_Type','Car_Name','Seller_Type']
 x = df[features]
 y = df['Selling_Price']
 x.shape, y.shape
@@ -198,7 +243,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 ```
 
 ```bash
-X = df[['Year','Present_Price','Owner','Kms_Driven','Age']]
+X = df[['Year','Present_Price','Owner','Kms_Driven','Age','Fuel_Type','Car_Name','Seller_Type']]
 y = df['Selling_Price']
 ```
 
@@ -226,8 +271,8 @@ print("R-squared:", r2)
 ## Inputan Model Regresi Linear
 
 ```bash
-#year=2017, present_price=9.85, owner=0, kms_driven=6900, age=12
-input_data = np.array([[2017,9.85,0,6900,12]])
+#year=2017, present_price=9.85, owner=0, kms_driven=6900, age=12, Fuel_Type=2 ,Car_Name=68 , Seller_Type=0
+input_data = np.array([[2017,9.85,0,6900,12,2,68,0]])
 
 prediction = lr.predict(input_data)
 print('Estimasi harga mobil dalam EUR :', prediction)
