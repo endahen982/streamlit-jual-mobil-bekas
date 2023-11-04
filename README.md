@@ -38,7 +38,7 @@ df.columns
 plt.figure(figsize=(10,8))
 sns.heatmap(df.corr(),annot=True)
 ```
-![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/869170d2-1cb6-4eab-92ba-b407a0908161)
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/6aebe364-fc9f-463d-a1de-59cf3de08f3a)
 
 Hasil grafik ini adalah tampilan visual yang menggambarkan sejauh mana kolom-kolom dalam data frame "df" bisa berkorelasi satu sama lain. Kolom yang memiliki korelasi positif tinggi akan terlihat sebagai sel dengan warna yang lebih terang, sedangkan kolom yang berkorelasi negatif tinggi akan terlihat sebagai sel dengan warna yang lebih gelap.
 
@@ -53,7 +53,7 @@ fig = plt.figure(figsize=(20,5))
 sns.barplot(x=Fuel_Types['Fuel_Type'], y=Fuel_Types['car data'], color='maroon')
 plt.xticks(rotation=40)
 ```
-![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/d6a1b957-70fc-4599-a6ae-e04f8b1d2e33)
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/151357a2-8401-4f7b-abb7-c228e28e6a77)
 
 Hasil grafik Jumlah Mobil Bekas Berdasarkan Jenis Bahan Bakar menunjukkan perbandingan jumlah data mobil yang menggunakan jenis bahan bakar yang berbeda. Berdasarkan grafik ini, kita dapat mengamati hal berikut:
 
@@ -72,22 +72,21 @@ Years = Years.rename(columns={'Selling_Price':'Count'})
 fig = plt.figure(figsize=(20,5))
 sns.barplot(x=Years['Year'], y=Years['Count'], color='maroon')
 ```
-![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/bae3134f-5e50-4ae8-b1b7-d60b9718e41a)
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/46675d0e-d7ca-45f4-8007-d1c4e2efd121)
 
 Hasil grafik Jumlah Data Penjualan Berdasarkan Tahun bisa dilihat bahwa penjualan terbanyak terjadi ditahun 2015 dan penjualan terendah terjadi pada 2004.
-
 
 ```bash
 plt.figure(figsize=(15,5))
 sns.distplot(df['Present_Price'])
 ```
-![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/b8602edf-8f24-42f3-adc4-207821264cc9)
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/86f30846-aa01-48f5-8fa5-2e33e96b0edf)
 
 ```bash
 plt.figure(figsize=(15,5))
 sns.distplot(df['Selling_Price'])
 ```
-![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/14baa8bc-71b0-4fa7-b536-203e5bcf8c14)
+![image](https://github.com/endahen982/streamlit-jual-mobil-bekas/assets/148830351/28bcfd8a-e831-4512-9f04-c2824bb0efd3)
 
 ### Variabel-variabel pada Vehicle dataset adalah sebagai berikut:
 - Car_Name : Mempresentasikan nama merek atau identifikasi mobil.
